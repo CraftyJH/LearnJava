@@ -1,0 +1,928 @@
+{
+  "title": "Java: Beginner to Mastery",
+  "subtitle": "Theory, coding challenges, mini-IDE, and major projects in one course.",
+  "sections": [
+    {
+      "id": "orientation",
+      "title": "Orientation and the Java platform",
+      "projectsAtEnd": true,
+      "lessons": [
+        {
+          "id": "welcome",
+          "title": "Welcome",
+          "theoryPath": "lessons/00-welcome.md",
+          "challenge": {
+            "instructions": "Print two lines: your goal for learning Java, then the phrase `Hello, JVM`.",
+            "starterCode": "public class Main {\n    public static void main(String[] args) {\n        // TODO\n    }\n}",
+            "className": "Main",
+            "hints": [
+              "Use System.out.println twice."
+            ]
+          }
+        },
+        {
+          "id": "jdk",
+          "title": "JDK and toolchain",
+          "theoryPath": "lessons/00-setup-jdk.md",
+          "challenge": {
+            "instructions": "Print the Java version string you expect to use locally (e.g., `JDK 21`) and print `javac` is the compiler.",
+            "starterCode": "public class Main {\n    public static void main(String[] args) {\n        // TODO\n    }\n}",
+            "className": "Main",
+            "hints": [
+              "This is output-only practice; any clear strings are fine."
+            ]
+          }
+        }
+      ],
+      "majorProjects": [
+        {
+          "title": "Project 0 \u2014 Learning journal CLI",
+          "description": "Build a text-based menu program that lets you append dated notes to a file `journal.txt` (create if missing). Support: add note, list last 5 notes, exit. Parse input with `Scanner`.",
+          "stretchGoals": [
+            "Add search by keyword.",
+            "Refactor into small methods with clear names."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fundamentals",
+      "title": "Syntax fundamentals: types, control flow, arrays, methods",
+      "projectsAtEnd": true,
+      "lessons": [
+        {
+          "id": "platform",
+          "title": "JVM and bytecode",
+          "theoryPath": "lessons/01-java-platform.md",
+          "challenge": {
+            "instructions": "Print one line explaining bytecode in your own words (10+ words).",
+            "starterCode": "public class Main {\n    public static void main(String[] args) {\n        // TODO\n    }\n}",
+            "className": "Main",
+            "hints": []
+          }
+        },
+        {
+          "id": "types",
+          "title": "Types and variables",
+          "theoryPath": "lessons/01-types-and-variables.md",
+          "challenge": {
+            "instructions": "Declare a `byte`, a `long` literal, and a `double`. Print their sum as a `double`.",
+            "starterCode": "public class Main {\n    public static void main(String[] args) {\n        // TODO\n    }\n}",
+            "className": "Main",
+            "hints": []
+          }
+        },
+        {
+          "id": "operators",
+          "title": "Operators",
+          "theoryPath": "lessons/01-operators.md",
+          "challenge": {
+            "instructions": "Given `int a = 17, b = 5`, print integer division and remainder on separate lines.",
+            "starterCode": "public class Main {\n    public static void main(String[] args) {\n        int a = 17;\n        int b = 5;\n        // TODO\n    }\n}",
+            "className": "Main",
+            "hints": []
+          }
+        },
+        {
+          "id": "control",
+          "title": "Control flow",
+          "theoryPath": "lessons/01-control-flow.md",
+          "challenge": {
+            "instructions": "Print the numbers 1 through 20, but print `Fizz` for multiples of 3, `Buzz` for multiples of 5, `FizzBuzz` for both.",
+            "starterCode": "public class Main {\n    public static void main(String[] args) {\n        // TODO\n    }\n}",
+            "className": "Main",
+            "hints": []
+          }
+        },
+        {
+          "id": "arrays",
+          "title": "Arrays",
+          "theoryPath": "lessons/01-arrays.md",
+          "challenge": {
+            "instructions": "Compute the average of `{2, 4, 6, 8}` using a loop and print it as a `double`.",
+            "starterCode": "public class Main {\n    public static void main(String[] args) {\n        int[] nums = {2, 4, 6, 8};\n        // TODO\n    }\n}",
+            "className": "Main",
+            "hints": []
+          }
+        },
+        {
+          "id": "methods",
+          "title": "Methods",
+          "theoryPath": "lessons/01-methods.md",
+          "challenge": {
+            "instructions": "Write `static int max(int a, int b)` and print `max(9, 4)`.",
+            "starterCode": "public class Main {\n    public static void main(String[] args) {\n        // TODO\n    }\n\n    // static int max(...)\n}",
+            "className": "Main",
+            "hints": []
+          }
+        }
+      ],
+      "majorProjects": [
+        {
+          "title": "Project 1 \u2014 Terminal calculator",
+          "description": "Implement a REPL that reads lines like `3 + 4` or `10 / 2` (integer math is fine). Support `+ - * /` and `quit`. Handle divide-by-zero gracefully.",
+          "stretchGoals": [
+            "Add parentheses parsing (shunting-yard or recursive descent).",
+            "Add `double` mode toggle."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "oop-1",
+      "title": "Object-oriented Java: classes, packages, static/final, records",
+      "projectsAtEnd": true,
+      "lessons": [
+        {
+          "id": "classes",
+          "title": "Classes and objects",
+          "theoryPath": "lessons/02-classes-and-objects.md",
+          "challenge": {
+            "instructions": "Create a `BankAccount` class with `double balance`, `void deposit(double)`, `void withdraw(double)` (no negative balance). In `main`, print balance after a few operations.",
+            "starterCode": "public class Main {\n    public static void main(String[] args) {\n        // TODO construct BankAccount and call methods\n    }\n}\n\n// class BankAccount { ... }",
+            "className": "Main",
+            "hints": []
+          }
+        },
+        {
+          "id": "packages",
+          "title": "Packages (theory)",
+          "theoryPath": "lessons/02-packages.md",
+          "challenge": {
+            "instructions": "Explain in one printed line why reverse-DNS package names reduce collisions.",
+            "starterCode": "public class Main {\n    public static void main(String[] args) {\n        // TODO\n    }\n}",
+            "className": "Main",
+            "hints": []
+          }
+        },
+        {
+          "id": "static-final",
+          "title": "static and final",
+          "theoryPath": "lessons/02-static-and-final.md",
+          "challenge": {
+            "instructions": "Declare `static final double PI = 3.141592653589793` and print the circumference of a circle with radius 5.",
+            "starterCode": "public class Main {\n    public static void main(String[] args) {\n        // TODO\n    }\n}",
+            "className": "Main",
+            "hints": []
+          }
+        },
+        {
+          "id": "records",
+          "title": "Records",
+          "theoryPath": "lessons/02-records-preview.md",
+          "challenge": {
+            "instructions": "Define `record Book(String title, int pages)` and print a `Book` instance's `toString()`.",
+            "starterCode": "public class Main {\n    public static void main(String[] args) {\n        // TODO\n    }\n}",
+            "className": "Main",
+            "hints": []
+          }
+        }
+      ],
+      "majorProjects": [
+        {
+          "title": "Project 2 \u2014 Library catalog",
+          "description": "Model `Book` and `Library` with add/list/search by title substring. Keep data in-memory. Provide a simple text menu.",
+          "stretchGoals": [
+            "Persist to a CSV file on exit and reload on start.",
+            "Add borrowing with due dates."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "strings-exceptions-enums",
+      "title": "Strings, exceptions, assertions, enums",
+      "projectsAtEnd": true,
+      "lessons": [
+        {
+          "id": "strings",
+          "title": "Strings and builders",
+          "theoryPath": "lessons/03-strings.md",
+          "challenge": {
+            "instructions": "Read no input: build the string `A-B-C-...-Z` using `StringBuilder` and print it.",
+            "starterCode": "public class Main {\n    public static void main(String[] args) {\n        // TODO\n    }\n}",
+            "className": "Main",
+            "hints": []
+          }
+        },
+        {
+          "id": "exceptions",
+          "title": "Exceptions",
+          "theoryPath": "lessons/03-exceptions.md",
+          "challenge": {
+            "instructions": "Write `static int parsePositiveInt(String s)` that throws `IllegalArgumentException` for null, blank, or non-positive values. In `main`, catch and print a friendly message.",
+            "starterCode": "public class Main {\n    public static void main(String[] args) {\n        // TODO try parsePositiveInt with a few literals\n    }\n}",
+            "className": "Main",
+            "hints": []
+          }
+        },
+        {
+          "id": "assertions",
+          "title": "Assertions",
+          "theoryPath": "lessons/03-assertions.md",
+          "challenge": {
+            "instructions": "Add an `assert` that `Math.sqrt(x) >= 0` for `x = 2` (note: assertions may be disabled unless `-ea`). Print a line explaining assertions are for internal invariants.",
+            "starterCode": "public class Main {\n    public static void main(String[] args) {\n        // TODO\n    }\n}",
+            "className": "Main",
+            "hints": []
+          }
+        },
+        {
+          "id": "enums",
+          "title": "Enums",
+          "theoryPath": "lessons/03-enums.md",
+          "challenge": {
+            "instructions": "Create `enum Direction { N, E, S, W }` and print all values using `values()`.",
+            "starterCode": "public class Main {\n    public static void main(String[] args) {\n        // TODO\n    }\n}",
+            "className": "Main",
+            "hints": []
+          }
+        }
+      ],
+      "majorProjects": [
+        {
+          "title": "Project 3 \u2014 Robust CSV stats",
+          "description": "Read a small embedded CSV string in code (no file required) representing `name,score`. Parse with `String.split`, convert scores safely, skip bad rows with clear error messages, print min/max/average.",
+          "stretchGoals": [
+            "Read from a real file using `Files.readString` locally (IDE), keep embedded mode for the web runner.",
+            "Add median calculation."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "generics-collections",
+      "title": "Generics, collections, comparators, streams intro",
+      "projectsAtEnd": true,
+      "lessons": [
+        {
+          "id": "generics",
+          "title": "Generics",
+          "theoryPath": "lessons/04-generics-basics.md",
+          "challenge": {
+            "instructions": "Implement a simple `class Box<T>` with `void set(T v)` and `T get()`. Store a `String` and print it.",
+            "starterCode": "public class Main {\n    public static void main(String[] args) {\n        // TODO\n    }\n}",
+            "className": "Main",
+            "hints": []
+          }
+        },
+        {
+          "id": "collections",
+          "title": "Collections",
+          "theoryPath": "lessons/04-collections-overview.md",
+          "challenge": {
+            "instructions": "Create `ArrayList<Integer>`, add 3,1,4,1,5, remove all `1`s, print the list.",
+            "starterCode": "import java.util.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        // TODO\n    }\n}",
+            "className": "Main",
+            "hints": []
+          }
+        },
+        {
+          "id": "comparators",
+          "title": "Sorting",
+          "theoryPath": "lessons/04-comparators.md",
+          "challenge": {
+            "instructions": "Sort `List<String>` `[\"bbb\",\"a\",\"cc\"]` by length then lexicographically. Print the list.",
+            "starterCode": "import java.util.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        // TODO\n    }\n}",
+            "className": "Main",
+            "hints": []
+          }
+        },
+        {
+          "id": "streams-intro",
+          "title": "Streams intro",
+          "theoryPath": "lessons/04-iterators-streams-intro.md",
+          "challenge": {
+            "instructions": "Given `List.of(1,2,3,4,5)`, print the sum of squares of even numbers using a stream pipeline.",
+            "starterCode": "import java.util.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        // TODO\n    }\n}",
+            "className": "Main",
+            "hints": []
+          }
+        }
+      ],
+      "majorProjects": [
+        {
+          "title": "Project 4 \u2014 Inventory with maps",
+          "description": "Track item SKU \u2192 quantity with `HashMap`. Support add/remove/adjust/print. Use `record Item(String sku, String name)` for metadata in another map if you like.",
+          "stretchGoals": [
+            "Add sorted reporting with `TreeMap`.",
+            "Persist map to JSON manually (string concat) for fun\u2014or use Jackson locally."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "oop-2",
+      "title": "Inheritance, abstract types, sealed types, nested classes",
+      "projectsAtEnd": true,
+      "lessons": [
+        {
+          "id": "inheritance",
+          "title": "Inheritance",
+          "theoryPath": "lessons/05-inheritance.md",
+          "challenge": {
+            "instructions": "Model `Animal` with `String speak()` overridden by `Cat` and `Dog`. Print each speak.",
+            "starterCode": "public class Main {\n    public static void main(String[] args) {\n        // TODO\n    }\n}",
+            "className": "Main",
+            "hints": []
+          }
+        },
+        {
+          "id": "abstract",
+          "title": "Abstract classes and interfaces",
+          "theoryPath": "lessons/05-abstract-classes.md",
+          "challenge": {
+            "instructions": "Create interface `Drawable` with `String draw()`. Implement it for `Square`. Print `draw()`.",
+            "starterCode": "public class Main {\n    public static void main(String[] args) {\n        // TODO\n    }\n}",
+            "className": "Main",
+            "hints": []
+          }
+        },
+        {
+          "id": "sealed",
+          "title": "Sealed types",
+          "theoryPath": "lessons/05-sealed-classes.md",
+          "challenge": {
+            "instructions": "If your JDK supports it, write a tiny sealed interface `Shape` with `Circle` and `Rectangle` permits and print areas via `instanceof` pattern matching. If not supported in the runner, comment that and print a note.",
+            "starterCode": "public class Main {\n    public static void main(String[] args) {\n        // TODO\n    }\n}",
+            "className": "Main",
+            "hints": []
+          }
+        },
+        {
+          "id": "nested",
+          "title": "Nested classes",
+          "theoryPath": "lessons/05-nested-classes.md",
+          "challenge": {
+            "instructions": "Demonstrate a `static` nested class `Outer.Util` with a static method returning `int` sum.",
+            "starterCode": "public class Main {\n    public static void main(String[] args) {\n        // TODO\n    }\n}",
+            "className": "Main",
+            "hints": []
+          }
+        }
+      ],
+      "majorProjects": [
+        {
+          "title": "Project 5 \u2014 Polymorphic simulation (tick-based)",
+          "description": "Create an `interface Entity { void tick(World w); }` and 2\u20133 entities with simple rules on a small grid printed as text. Run 10 ticks.",
+          "stretchGoals": [
+            "Add collisions.",
+            "Add a simple event log."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "functional",
+      "title": "Lambdas, streams deep dive, Optional",
+      "projectsAtEnd": true,
+      "lessons": [
+        {
+          "id": "lambdas",
+          "title": "Lambdas",
+          "theoryPath": "lessons/06-lambdas-functional.md",
+          "challenge": {
+            "instructions": "Use `Predicate<String>` to test blank strings and print results for `{\"a\",\"\", \" \"}`.",
+            "starterCode": "import java.util.function.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        // TODO\n    }\n}",
+            "className": "Main",
+            "hints": []
+          }
+        },
+        {
+          "id": "streams",
+          "title": "Streams",
+          "theoryPath": "lessons/06-streams-deep.md",
+          "challenge": {
+            "instructions": "Group words by first letter using streams: input list `List.of(\"apple\",\"apricot\",\"banana\")`, print map.",
+            "starterCode": "import java.util.*;\nimport java.util.stream.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        // TODO\n    }\n}",
+            "className": "Main",
+            "hints": []
+          }
+        },
+        {
+          "id": "optional",
+          "title": "Optional",
+          "theoryPath": "lessons/06-optionals.md",
+          "challenge": {
+            "instructions": "Write `static Optional<String> findShort(String s, int maxLen)` returning empty if null or longer than max. Demonstrate `orElse`.",
+            "starterCode": "import java.util.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        // TODO\n    }\n}",
+            "className": "Main",
+            "hints": []
+          }
+        }
+      ],
+      "majorProjects": [
+        {
+          "title": "Project 6 \u2014 Log query tool",
+          "description": "Model `record LogLine(Instant ts, String level, String msg)` (use `Instant.now()` fake times if easier). Provide filtering by level, substring search, and counting by level using streams.",
+          "stretchGoals": [
+            "Add time-window filtering.",
+            "Pretty-print histogram in ASCII."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "advanced-language",
+      "title": "Annotations, reflection (carefully), modules overview",
+      "projectsAtEnd": true,
+      "lessons": [
+        {
+          "id": "annotations",
+          "title": "Annotations",
+          "theoryPath": "lessons/07-annotations.md",
+          "challenge": {
+            "instructions": "Create `@interface Todo { String value(); }` and annotate `main` method (retention runtime optional). Print a line explaining metadata use.",
+            "starterCode": "import java.lang.annotation.*;\n\n@Retention(RetentionPolicy.SOURCE)\n@interface Todo {\n    String value();\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        // TODO\n    }\n}",
+            "className": "Main",
+            "hints": []
+          }
+        },
+        {
+          "id": "reflection",
+          "title": "Reflection",
+          "theoryPath": "lessons/07-reflection-basics.md",
+          "challenge": {
+            "instructions": "Use reflection to print the declared methods of `String.class` count (not listing all if too long\u2014print count only).",
+            "starterCode": "public class Main {\n    public static void main(String[] args) {\n        // TODO\n    }\n}",
+            "className": "Main",
+            "hints": []
+          }
+        },
+        {
+          "id": "modules",
+          "title": "Modules",
+          "theoryPath": "lessons/07-modules-advanced.md",
+          "challenge": {
+            "instructions": "Print 2 lines: what `exports` does in `module-info.java`, and what `requires` does.",
+            "starterCode": "public class Main {\n    public static void main(String[] args) {\n        // TODO\n    }\n}",
+            "className": "Main",
+            "hints": []
+          }
+        }
+      ],
+      "majorProjects": [
+        {
+          "title": "Project 7 \u2014 Mini plugin loader (classpath simulation)",
+          "description": "Define a `Greeter` interface and two implementations in the same file for simplicity. Select implementation name from `args[0]` via `switch` and print greeting (fake plugin loading without URLClassLoader).",
+          "stretchGoals": [
+            "Actually load from separate `.java` files locally and compile with `javac` script.",
+            "Add validation and helpful errors."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "io-time-i18n",
+      "title": "IO/NIO.2, serialization awareness, regex, time, i18n",
+      "projectsAtEnd": true,
+      "lessons": [
+        {
+          "id": "nio",
+          "title": "NIO.2",
+          "theoryPath": "lessons/08-io-nio2.md",
+          "challenge": {
+            "instructions": "Print a line recommending `Files.readString` for small text files and `BufferedInputStream` for large binary reads.",
+            "starterCode": "public class Main {\n    public static void main(String[] args) {\n        // TODO\n    }\n}",
+            "className": "Main",
+            "hints": []
+          }
+        },
+        {
+          "id": "serialization",
+          "title": "Serialization risks",
+          "theoryPath": "lessons/08-serialization.md",
+          "challenge": {
+            "instructions": "Print three bullet-like lines (plain text) describing risks of Java deserialization on untrusted data.",
+            "starterCode": "public class Main {\n    public static void main(String[] args) {\n        // TODO\n    }\n}",
+            "className": "Main",
+            "hints": []
+          }
+        },
+        {
+          "id": "regex",
+          "title": "Regex",
+          "theoryPath": "lessons/08-regex.md",
+          "challenge": {
+            "instructions": "Extract all integers from `\"a1b22c333\"` using `Pattern`/`Matcher` and print their sum.",
+            "starterCode": "import java.util.regex.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        // TODO\n    }\n}",
+            "className": "Main",
+            "hints": []
+          }
+        },
+        {
+          "id": "time",
+          "title": "java.time",
+          "theoryPath": "lessons/09-date-time.md",
+          "challenge": {
+            "instructions": "Print today's ISO local date using `LocalDate.now()` and the current instant using `Instant.now()`.",
+            "starterCode": "import java.time.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        // TODO\n    }\n}",
+            "className": "Main",
+            "hints": []
+          }
+        },
+        {
+          "id": "i18n",
+          "title": "Internationalization",
+          "theoryPath": "lessons/09-internationalization.md",
+          "challenge": {
+            "instructions": "Print numbers `1234567.89` formatted for `Locale.US` and `Locale.GERMANY` using `NumberFormat`.",
+            "starterCode": "import java.text.*;\nimport java.util.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        // TODO\n    }\n}",
+            "className": "Main",
+            "hints": []
+          }
+        }
+      ],
+      "majorProjects": [
+        {
+          "title": "Project 8 \u2014 Time zone meeting planner (text)",
+          "description": "Given two zones and a list of candidate `LocalTime` windows, print which candidates are workable (simulate with fixed offsets using `ZoneOffset.ofHours`).",
+          "stretchGoals": [
+            "Use real `ZoneId` rules.",
+            "Add DST warnings using `ZoneRules`."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "concurrency",
+      "title": "Threads, executors, JMM, concurrent collections",
+      "projectsAtEnd": true,
+      "lessons": [
+        {
+          "id": "threads",
+          "title": "Threads basics",
+          "theoryPath": "lessons/10-threads-basics.md",
+          "challenge": {
+            "instructions": "Start two threads that each print 5 lines with their name (`Thread.currentThread().getName()`). Join both before exiting `main`.",
+            "starterCode": "public class Main {\n    public static void main(String[] args) throws Exception {\n        // TODO\n    }\n}",
+            "className": "Main",
+            "hints": []
+          }
+        },
+        {
+          "id": "executors",
+          "title": "Executors and futures",
+          "theoryPath": "lessons/10-executor-futures.md",
+          "challenge": {
+            "instructions": "Use `Executors.newFixedThreadPool(2)` to submit two `Callable<Integer>` tasks that sleep 100ms and return values; print sum of futures.",
+            "starterCode": "import java.util.concurrent.*;\n\npublic class Main {\n    public static void main(String[] args) throws Exception {\n        // TODO\n    }\n}",
+            "className": "Main",
+            "hints": []
+          }
+        },
+        {
+          "id": "jmm",
+          "title": "Memory model",
+          "theoryPath": "lessons/10-jmm-advanced.md",
+          "challenge": {
+            "instructions": "Print a careful explanation: why `volatile` alone may not fix `i++` races.",
+            "starterCode": "public class Main {\n    public static void main(String[] args) {\n        // TODO\n    }\n}",
+            "className": "Main",
+            "hints": []
+          }
+        },
+        {
+          "id": "conc-collections",
+          "title": "Concurrent collections",
+          "theoryPath": "lessons/10-thread-safe-collections.md",
+          "challenge": {
+            "instructions": "Demonstrate `ConcurrentHashMap.merge` to count word frequencies in a sentence.",
+            "starterCode": "import java.util.concurrent.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        // TODO\n    }\n}",
+            "className": "Main",
+            "hints": []
+          }
+        }
+      ],
+      "majorProjects": [
+        {
+          "title": "Project 9 \u2014 Web crawler toy (single JVM)",
+          "description": "No real network required: simulate downloading URLs with `Thread.sleep` random ms. Use a fixed pool to process 20 URLs and collect statistics (min/max simulated latency).",
+          "stretchGoals": [
+            "Use `CompletableFuture` instead of raw futures.",
+            "Add cancellation after a timeout."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "quality-performance",
+      "title": "Testing concepts, profiling, JVM memory/GC, classloading",
+      "projectsAtEnd": true,
+      "lessons": [
+        {
+          "id": "junit",
+          "title": "JUnit concepts",
+          "theoryPath": "lessons/11-testing-junit.md",
+          "challenge": {
+            "instructions": "Write `static void assertEven(int n)` throwing `IllegalStateException` if odd. Call it from `main` with try/catch to simulate a test failure message.",
+            "starterCode": "public class Main {\n    public static void main(String[] args) {\n        // TODO\n    }\n}",
+            "className": "Main",
+            "hints": []
+          }
+        },
+        {
+          "id": "mocking",
+          "title": "Mocking",
+          "theoryPath": "lessons/11-mocking.md",
+          "challenge": {
+            "instructions": "Print two lines contrasting stubs vs mocks in your own words.",
+            "starterCode": "public class Main {\n    public static void main(String[] args) {\n        // TODO\n    }\n}",
+            "className": "Main",
+            "hints": []
+          }
+        },
+        {
+          "id": "bench",
+          "title": "Benchmarking",
+          "theoryPath": "lessons/11-benchmarking.md",
+          "challenge": {
+            "instructions": "Print why naive `System.nanoTime` loops can mislead without warmup.",
+            "starterCode": "public class Main {\n    public static void main(String[] args) {\n        // TODO\n    }\n}",
+            "className": "Main",
+            "hints": []
+          }
+        },
+        {
+          "id": "gc",
+          "title": "GC and memory",
+          "theoryPath": "lessons/12-memory-gc.md",
+          "challenge": {
+            "instructions": "Print a paragraph describing a scenario where creating many short-lived objects is OK due to generational GC (high-level).",
+            "starterCode": "public class Main {\n    public static void main(String[] args) {\n        // TODO\n    }\n}",
+            "className": "Main",
+            "hints": []
+          }
+        },
+        {
+          "id": "classloading",
+          "title": "Classloading",
+          "theoryPath": "lessons/12-classloading.md",
+          "challenge": {
+            "instructions": "Explain in printed lines what a `ClassLoader` does at a high level.",
+            "starterCode": "public class Main {\n    public static void main(String[] args) {\n        // TODO\n    }\n}",
+            "className": "Main",
+            "hints": []
+          }
+        },
+        {
+          "id": "perf",
+          "title": "Performance",
+          "theoryPath": "lessons/12-performance.md",
+          "challenge": {
+            "instructions": "Print a checklist (5 items) for investigating a slow Java service before tuning JVM flags.",
+            "starterCode": "public class Main {\n    public static void main(String[] args) {\n        // TODO\n    }\n}",
+            "className": "Main",
+            "hints": []
+          }
+        }
+      ],
+      "majorProjects": [
+        {
+          "title": "Project 10 \u2014 Deterministic simulation with property tests (manual)",
+          "description": "Implement a pure `Money` class (cents as `long`) with add/subtract and test it from `main` using a batch of assertions (throw on failure). No JUnit required in the runner.",
+          "stretchGoals": [
+            "Add JUnit locally in IntelliJ.",
+            "Generate random cases in `main` with a fixed seed."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "security-observability",
+      "title": "Security mindset, logging, HTTP client",
+      "projectsAtEnd": true,
+      "lessons": [
+        {
+          "id": "security",
+          "title": "Security",
+          "theoryPath": "lessons/13-security.md",
+          "challenge": {
+            "instructions": "Print 5 secure coding practices relevant to Java servers.",
+            "starterCode": "public class Main {\n    public static void main(String[] args) {\n        // TODO\n    }\n}",
+            "className": "Main",
+            "hints": []
+          }
+        },
+        {
+          "id": "logging",
+          "title": "Logging",
+          "theoryPath": "lessons/13-logging.md",
+          "challenge": {
+            "instructions": "Print an example log line including `level`, `thread`, `logger`, and `message` fields as JSON text.",
+            "starterCode": "public class Main {\n    public static void main(String[] args) {\n        // TODO\n    }\n}",
+            "className": "Main",
+            "hints": []
+          }
+        },
+        {
+          "id": "http",
+          "title": "HTTP client",
+          "theoryPath": "lessons/13-http-client.md",
+          "challenge": {
+            "instructions": "Print a code sketch (as comments) showing `HttpClient.newHttpClient().send(...)` with timeout\u2014no need to actually call network.",
+            "starterCode": "public class Main {\n    public static void main(String[] args) {\n        /* TODO: sketch in comments */\n    }\n}",
+            "className": "Main",
+            "hints": []
+          }
+        }
+      ],
+      "majorProjects": [
+        {
+          "title": "Project 11 \u2014 Audit log library (in-memory)",
+          "description": "Implement `AuditLog` storing immutable events (`Instant`, `String user`, `String action`). Provide query by user and export as CSV string.",
+          "stretchGoals": [
+            "Add ring buffer max size with drop policy.",
+            "Add checksum per batch."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "architecture",
+      "title": "Patterns, SOLID, layering",
+      "projectsAtEnd": true,
+      "lessons": [
+        {
+          "id": "patterns",
+          "title": "Design patterns",
+          "theoryPath": "lessons/14-design-patterns.md",
+          "challenge": {
+            "instructions": "Implement `interface PricingStrategy { int price(int cents); }` and two strategies (full price, 10% off). Print results for 1000 cents.",
+            "starterCode": "public class Main {\n    public static void main(String[] args) {\n        // TODO\n    }\n}",
+            "className": "Main",
+            "hints": []
+          }
+        },
+        {
+          "id": "solid",
+          "title": "SOLID",
+          "theoryPath": "lessons/14-solid.md",
+          "challenge": {
+            "instructions": "Pick one SOLID letter and print a Java-specific example scenario where it helps.",
+            "starterCode": "public class Main {\n    public static void main(String[] args) {\n        // TODO\n    }\n}",
+            "className": "Main",
+            "hints": []
+          }
+        },
+        {
+          "id": "clean",
+          "title": "Clean architecture",
+          "theoryPath": "lessons/14-clean-architecture.md",
+          "challenge": {
+            "instructions": "Print a layered diagram in ASCII (3 layers) for a hypothetical app: UI, domain, infrastructure.",
+            "starterCode": "public class Main {\n    public static void main(String[] args) {\n        // TODO\n    }\n}",
+            "className": "Main",
+            "hints": []
+          }
+        }
+      ],
+      "majorProjects": [
+        {
+          "title": "Project 12 \u2014 Refactor spaghetti into layers",
+          "description": "Start from a purposely messy `main` that mixes IO and domain rules. Extract pure domain methods and separate printing. Keep behavior identical.",
+          "stretchGoals": [
+            "Introduce interfaces for repositories.",
+            "Add tests for domain methods locally."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "engineering",
+      "title": "Build tools, CI, Spring orientation, JDBC, REST, microservices caution",
+      "projectsAtEnd": true,
+      "lessons": [
+        {
+          "id": "maven-gradle",
+          "title": "Maven and Gradle",
+          "theoryPath": "lessons/15-build-tools.md",
+          "challenge": {
+            "instructions": "Print what `mvn verify` typically runs, in your own words, in 2\u20133 lines.",
+            "starterCode": "public class Main {\n    public static void main(String[] args) {\n        // TODO\n    }\n}",
+            "className": "Main",
+            "hints": []
+          }
+        },
+        {
+          "id": "ci",
+          "title": "CI/CD",
+          "theoryPath": "lessons/15-ci-cd.md",
+          "challenge": {
+            "instructions": "List 6 CI steps as separate println lines for a Java library.",
+            "starterCode": "public class Main {\n    public static void main(String[] args) {\n        // TODO\n    }\n}",
+            "className": "Main",
+            "hints": []
+          }
+        },
+        {
+          "id": "spring",
+          "title": "Spring Boot orientation",
+          "theoryPath": "lessons/15-spring-overview.md",
+          "challenge": {
+            "instructions": "Explain dependency injection in 3 println lines: what, why, example.",
+            "starterCode": "public class Main {\n    public static void main(String[] args) {\n        // TODO\n    }\n}",
+            "className": "Main",
+            "hints": []
+          }
+        },
+        {
+          "id": "jdbc",
+          "title": "JDBC and databases",
+          "theoryPath": "lessons/15-databases-jdbc.md",
+          "challenge": {
+            "instructions": "Print why `PreparedStatement` is preferred over string concatenation for SQL values.",
+            "starterCode": "public class Main {\n    public static void main(String[] args) {\n        // TODO\n    }\n}",
+            "className": "Main",
+            "hints": []
+          }
+        },
+        {
+          "id": "rest",
+          "title": "REST APIs",
+          "theoryPath": "lessons/15-rest-apis.md",
+          "challenge": {
+            "instructions": "Print example HTTP request line + headers for `GET /users/42` with `Accept: application/json`.",
+            "starterCode": "public class Main {\n    public static void main(String[] args) {\n        // TODO\n    }\n}",
+            "className": "Main",
+            "hints": []
+          }
+        },
+        {
+          "id": "microservices",
+          "title": "Microservices caution",
+          "theoryPath": "lessons/15-microservices-caution.md",
+          "challenge": {
+            "instructions": "Print two pros and two cons of microservices from a Java team perspective.",
+            "starterCode": "public class Main {\n    public static void main(String[] args) {\n        // TODO\n    }\n}",
+            "className": "Main",
+            "hints": []
+          }
+        }
+      ],
+      "majorProjects": [
+        {
+          "title": "Project 13 \u2014 Spring Boot local service (recommended)",
+          "description": "In IntelliJ, create a Spring Boot app with one `GET /hello` endpoint returning JSON `{message:\"...\"}`. This site cannot run Spring for you, but this is the bridge to industry skills.",
+          "stretchGoals": [
+            "Add Spring Data JPA entity + repository + H2.",
+            "Add validation and global exception handler."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "capstone",
+      "title": "Capstone guidance and mastery habits",
+      "projectsAtEnd": true,
+      "lessons": [
+        {
+          "id": "capstone-guide",
+          "title": "Capstone guidance",
+          "theoryPath": "lessons/16-capstone-guidance.md",
+          "challenge": {
+            "instructions": "Print your personal plan: 3 bullet lines with topics you will deepen next based on this course.",
+            "starterCode": "public class Main {\n    public static void main(String[] args) {\n        // TODO\n    }\n}",
+            "className": "Main",
+            "hints": []
+          }
+        }
+      ],
+      "majorProjects": [
+        {
+          "title": "CAPSTONE A \u2014 Budget tracker with reports",
+          "description": "Categories, monthly totals, export CSV, and invariants (no negative balances unless credit). CLI or desktop optional.",
+          "stretchGoals": [
+            "Charts in a local web UI.",
+            "Import bank CSV."
+          ]
+        },
+        {
+          "title": "CAPSTONE B \u2014 Multi-user chat server ( sockets )",
+          "description": "Java `ServerSocket` accepts clients; broadcast messages; graceful shutdown; basic protocol (`JOIN`, `MSG`, `LEAVE`).",
+          "stretchGoals": [
+            "TLS.",
+            "User authentication.",
+            "Persistence."
+          ]
+        },
+        {
+          "title": "CAPSTONE C \u2014 Build your own test runner",
+          "description": "Reflectively find `@Test` annotated methods (custom annotation) on classes you list, invoke, collect failures. This deepens reflection and classloading.",
+          "stretchGoals": [
+            "Parallel execution with executor.",
+            "JUnit-compatible XML report."
+          ]
+        },
+        {
+          "title": "CAPSTONE D \u2014 Plugin-based rule engine",
+          "description": "Define `Rule` interface, load rules from a config list, apply to a `Fact` map. Great for OOP + architecture practice.",
+          "stretchGoals": [
+            "DSL parser for rules.",
+            "Hot reload rules file."
+          ]
+        }
+      ]
+    }
+  ]
+}
