@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Java Mastery — Learn with mini-IDE</title>
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="logo">☕</span>
+      <div>
+        <h1>Java Mastery</h1>
+        <p class="tagline" id="courseSubtitle">Loading…</p>
+      </div>
+    </div>
+    <div class="top-actions">
+      <label class="sr-only" for="classNameInput">Public class name</label>
+      <input id="classNameInput" type="text" spellcheck="false" maxlength="64" title="Must match public class in editor" />
+      <button type="button" id="runBtn" class="primary">Run</button>
+      <button type="button" id="resetBtn">Reset starter</button>
+    </div>
+  </header>
+
+  <div class="layout">
+    <nav class="sidebar" aria-label="Curriculum">
+      <div class="sidebar-head">Curriculum</div>
+      <div id="sectionNav"></div>
+    </nav>
+
+    <main class="theory-pane">
+      <div class="breadcrumb" id="breadcrumb"></div>
+      <article id="theoryContent" class="theory markdown-body"></article>
+      <section id="challengePanel" class="challenge-panel hidden">
+        <h2>Challenge</h2>
+        <p id="challengeInstructions" class="challenge-text"></p>
+        <details id="hintsBlock" class="hints">
+          <summary>Hints</summary>
+          <ul id="hintsList"></ul>
+        </details>
+      </section>
+      <section id="projectsPanel" class="projects-panel hidden">
+        <h2>Major projects</h2>
+        <p class="muted">Complete in your local IDE for larger scope; the mini-IDE is best for single-file exercises.</p>
+        <div id="projectsList"></div>
+      </section>
+    </main>
+
+    <aside class="ide-pane" aria-label="Mini IDE">
+      <div class="ide-toolbar">
+        <span class="ide-label">Editor</span>
+        <span id="editorStatus" class="muted"></span>
+      </div>
+      <div id="editorMount"></div>
+      <div class="output-head">
+        <span>Output</span>
+        <button type="button" id="clearOutBtn" class="linkish">Clear</button>
+      </div>
+      <pre id="stdout" class="io out"></pre>
+      <pre id="stderr" class="io err"></pre>
+      <details id="compileDetails" class="compile-details">
+        <summary>Compiler messages</summary>
+        <pre id="compileOut" class="io compile"></pre>
+      </details>
+    </aside>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/monaco-editor@0.45.0/min/vs/loader.js"></script>
+  <script src="/app.js"></script>
+</body>
+</html>
