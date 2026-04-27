@@ -18,6 +18,11 @@ mvn spring-boot:run
 
 Open `http://localhost:8080`.
 
+## Layout and progress (in the browser)
+
+- **Theory** stays in the left column; **challenge, projects, editor, and output** are stacked in the **Code** column so you can read instructions without scrolling away from the editor.
+- **Progress** is stored in **localStorage** (this device and browser only): completed lessons, per-lesson code drafts, and class name. Use **Export** / **Import** JSON to move progress between machines or back up before clearing site data.
+
 ## Curriculum content
 
 Theory lives under `src/main/resources/static/lessons/`. The navigation tree and challenges are generated into `src/main/resources/static/data/curriculum.json` by:
