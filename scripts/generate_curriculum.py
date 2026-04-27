@@ -12,8 +12,32 @@ LESSONS_DIR.mkdir(parents=True, exist_ok=True)
 DATA_DIR.mkdir(parents=True, exist_ok=True)
 
 
+COMMON_TAIL = """
+## How to read Java like a practitioner
+
+When you open a file, skim in this order: **package and imports** (dependencies), **public types** (what the module exports), then **constructors and public methods** (how it is used). Only then dive into private helpers. This mirrors how teams navigate large repositories.
+
+## Common pitfalls (across lessons)
+
+- Using `=` when you meant `==`, especially in `if` conditions.
+- Integer division surprises (`5 / 2` is `2`, not `2.5`).
+- Treating `null` as “empty”: always decide explicitly whether `null` is allowed.
+- Catching `Exception` too broadly and hiding the real failure.
+
+## Before you click Run
+
+Say aloud **one predicted line of output**. If the real output differs, you have found a concrete misunderstanding—reread the theory section that matches the mismatch.
+
+## After it works
+
+Spend sixty seconds on **one** improvement: clearer variable names, a helper method, or a comment explaining *why* (not *what*). Small refactors build taste faster than only writing throwaway answers.
+"""
+
 def md(title: str, body: str) -> str:
-    return f"# {title}\n\n{body.strip()}\n"
+    b = body.strip()
+    if b.endswith("<!-- no-common-tail -->"):
+        return f"# {title}\n\n{b.replace('<!-- no-common-tail -->', '').strip()}\n"
+    return f"# {title}\n\n{b}\n{COMMON_TAIL}\n"
 
 
 # Each entry: (filename, title, markdown_body)
